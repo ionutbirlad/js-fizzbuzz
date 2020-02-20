@@ -17,9 +17,13 @@ var resto = 0;
 // console.log(sentinella);
 
 // Stampo tutti i numeri da 1 a 100 filtrandoli
+
+// METODO 1
+/*
 for (var i = 0; i < 100; i++) {
   // sentinella = sentinella + 1;
   numeri.push((i + 1));
+
   if (((resto = numeri[i] % 3) == 0) && ((resto = numeri[i] % 5) == 0)) {
     numeri[i] = "FizzBuzz";
   } else if ((resto = numeri[i] % 3) == 0) {
@@ -29,4 +33,19 @@ for (var i = 0; i < 100; i++) {
   }
   document.getElementById('text').innerHTML += " " + numeri[i] + " ";
 }
-console.log(numeri);
+*/
+
+
+// METODO 2
+for (var i = 0; i < 100; i++) {
+  // sentinella = sentinella + 1;
+  if (((resto = (i + 1) % 3) == 0) && ((resto = (i + 1) % 5) == 0)) {
+    document.getElementsByClassName('element')[i].innerHTML = "FizzBuzz";
+  } else if ((resto = (i + 1) % 3) == 0) {
+    document.getElementsByClassName('element')[i].innerHTML = "Fizz";
+  } else if ((resto = (i + 1) % 5) == 0) {
+    document.getElementsByClassName('element')[i].innerHTML = "Buzz";
+  } else {
+    document.getElementsByClassName('element')[i].innerHTML = (i + 1);
+  }
+}
