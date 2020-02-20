@@ -38,7 +38,6 @@ for (var i = 0; i < 100; i++) {
 
 // METODO 2
 for (var i = 0; i < 100; i++) {
-  // sentinella = sentinella + 1;
   if (((resto = (i + 1) % 3) == 0) && ((resto = (i + 1) % 5) == 0)) {
     document.getElementsByClassName('element')[i].innerHTML = "FizzBuzz";
   } else if ((resto = (i + 1) % 3) == 0) {
@@ -47,5 +46,15 @@ for (var i = 0; i < 100; i++) {
     document.getElementsByClassName('element')[i].innerHTML = "Buzz";
   } else {
     document.getElementsByClassName('element')[i].innerHTML = (i + 1);
+  }
+}
+
+for (var i = 0; i < 100; i++) {
+  if (((resto = (i + 1) % 3) == 0) && ((resto = (i + 1) % 5) == 0)) {
+    document.getElementsByClassName('element')[i].setAttribute("class", "element onlyfizz");
+  } else if ((resto = (i + 1) % 3) == 0) {
+    document.getElementsByClassName('element')[i].setAttribute("class", "element onlyfizz");
+  } else if ((resto = (i + 1) % 5) == 0) {
+    document.getElementsByClassName('element')[i].setAttribute("class", "element onlyfizz");
   }
 }
