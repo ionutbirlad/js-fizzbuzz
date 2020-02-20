@@ -16,7 +16,7 @@ var sentinella = 0;
 var resto = [0];
 // console.log(sentinella);
 
-// Stampo tutti i numeri da 1 a 100
+// Stampo tutti i numeri da 1 a 100 filtrandoli
 for (var i = 0; i < 100; i++) {
   sentinella = sentinella + 1;
   numeri.push(sentinella);
